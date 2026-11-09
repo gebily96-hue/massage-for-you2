@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>write our boy name</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#14161f;--ink:#ece6da;--mute:#9a9486;--line:#3a3d4d;--acc:#c9a66b;--err:#d98a8a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f3eee4;--ink:#2a2620;--mute:#7a7365;--line:#cfc6b4;--acc:#8a6a2f;--err:#a84646}}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:'Amiri','Traditional Arabic',serif}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.lock{width:100%;max-width:380px;text-align:center}
+.lock h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:1.5rem;letter-spacing:.04em;margin:0 0 28px;direction:ltr}
+input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--ink);font:inherit;font-size:1.6rem;text-align:center;padding:10px 4px;outline:none;transition:border-color .2s}
+input:focus{border-color:var(--acc)}
+.msg{min-height:1.6em;margin-top:14px;color:var(--err);font-size:1.05rem}
+.lock.shake{animation:sh .35s}
+@keyframes sh{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+article{display:none;width:100%;max-width:34rem}
+article p{font-size:1.35rem;line-height:2.1;margin:0 0 1.3em;text-wrap:pretty}
+article.on{display:block;animation:fd 1.4s ease both}
+@keyframes fd{from{opacity:0}to{opacity:1}}
+body.open{align-items:flex-start;padding-top:48px;padding-bottom:64px}
+@media (prefers-reduced-motion:reduce){article.on,.lock.shake{animation:none}}
+</style>
+</head>
+<body>
+<div class="lock" id="lock">
+  <h1>write our boy name</h1>
+  <input id="in" type="text" dir="rtl" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="write our boy name">
+  <div class="msg" id="msg" role="status"></div>
+</div>
+<article id="art"></article>
+<script>
+const S="7UeFHXoMyIP8C33QZbmR4w==",I="dGGQKoXFRXVo4jjL",C="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";
+const b=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+const norm=s=>{s=s.trim().toLowerCase().replace(/[\u064B-\u065F\u0670\u0640\s]/g,'').replace(/ى/g,'ي').replace(/ي{2,}/g,'ي');
+  return ['yahya','yahia','yehia','yehya'].includes(s)?'يحي':s};
+async function tryOpen(v){
+  const k=norm(v); if(!k) return false;
+  try{
+    const base=await crypto.subtle.importKey('raw',new TextEncoder().encode(k),'PBKDF2',false,['deriveKey']);
+    const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b(S),iterations:150000,hash:'SHA-256'},base,{name:'AES-GCM',length:256},false,['decrypt']);
+    const buf=await crypto.subtle.decrypt({name:'AES-GCM',iv:b(I)},key,b(C));
+    return new TextDecoder().decode(buf);
+  }catch(e){return false}
+}
+const inp=document.getElementById('in'),msg=document.getElementById('msg'),lock=document.getElementById('lock'),art=document.getElementById('art');
+let busy=false,t;
+inp.addEventListener('input',()=>{
+  clearTimeout(t);
+  t=setTimeout(async()=>{
+    if(busy) return; busy=true;
+    const txt=await tryOpen(inp.value);
+    busy=false;
+    if(txt){
+      txt.split(/\n\s*\n/).forEach(p=>{const e=document.createElement('p');e.textContent=p;art.appendChild(e)});
+      lock.style.display='none';art.classList.add('on');document.body.classList.add('open');
+    }else if(inp.value.trim().length>=3){
+      msg.textContent='مش الاسم ده، جرّب تاني';
+      lock.classList.remove('shake');void lock.offsetWidth;lock.classList.add('shake');
+    }else msg.textContent='';
+  },350);
+});
+inp.addEventListener('keydown',e=>{if(e.key==='Enter') inp.dispatchEvent(new Event('input'))});
+inp.focus();
+</script>
+</body>
+</html>
